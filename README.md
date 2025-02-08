@@ -78,7 +78,6 @@ code-commenter/
 │   └── cli.js          # Command-line interface entry point
 ├── src/
 │   ├── index.js        # Main application logic
-│   ├── parser.js       # Code parsing utilities
 │   ├── commentor.js    # Comment generation logic
 │   └── config.js       # Configuration management
 ├── package.json
