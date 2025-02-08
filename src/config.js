@@ -1,4 +1,3 @@
-
 import Configstore from "configstore";
 import inquirer from "inquirer";
 import { GoogleGenerativeAI } from "@google/generative-ai";
@@ -41,4 +40,13 @@ export function getGeminiApiKey() {
 export function clearApiKey() {
     config.delete("geminiApiKey");
     console.log("✅ Gemini API key cleared");
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+    const action = process.argv[2];
+    if (action === "--clear") {
+        clearApiKey();
+    } else {
+        initializeGemini().catch(console.error);
+    }
 }
