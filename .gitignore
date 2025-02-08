@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Config files (API keys, local settings)
+config.json
+.env
+
+# Compiled files
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
