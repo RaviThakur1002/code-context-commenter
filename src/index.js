@@ -1,8 +1,5 @@
-
 import fs from "fs";
-import path from "path";
 import { generateComments } from "./commentor.js";
-import { extractCodeBlocks } from "./parser.js";
 
 export function processFile(filePath) {
   fs.readFile(filePath, "utf8", async (err, data) => {
@@ -13,17 +10,17 @@ export function processFile(filePath) {
 
     console.log("📄 Processing file:", filePath);
 
-    // Extract code blocks (assuming this function gets individual functions/classes)
-    const codeBlocks = extractCodeBlocks(data);
-
-    // Generate comments for each code block
-    const commentedCode = await generateComments(codeBlocks);
-
-    // Instead of creating a new file, write back to the same file
-    fs.writeFile(filePath, commentedCode, (err) => {
-      if (err) console.error("❌ Error saving file:", err);
-      else console.log("✅ File updated:", filePath);
-    });
+    try {
+      // Send the entire file content directly to generate comments
+      const commentedCode = await generateComments(data);
+      
+      // Write the commented code back to the file
+      fs.writeFile(filePath, commentedCode, (err) => {
+        if (err) console.error("❌ Error saving file:", err);
+        else console.log("✅ File updated:", filePath);
+      });
+    } catch (error) {
+      console.error("❌ Error processing file:", error);
+    }
   });
 }
-

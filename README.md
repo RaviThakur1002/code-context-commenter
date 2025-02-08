@@ -11,16 +11,6 @@ A CLI tool that automatically generates intelligent comments for your JavaScript
 
 ## Installation
 
-### 1. Install the Package
-
-There are two ways to install the package:
-
-#### Option A: Install from npm (Recommended)
-```bash
-npm install -g code-commenter
-```
-
-#### Option B: Install from source
 ```bash
 # Clone the repository
 git clone https://github.com/RaviThakur1002/code-context-commenter
