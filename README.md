@@ -1,61 +1,76 @@
-# Code Commenter
 
-A CLI tool that automatically generates intelligent comments for your JavaScript code using Google's Gemini AI.
+# 🚀 Code Commenter
 
-## Prerequisites
+A **CLI tool** that automatically generates **intelligent comments** for your JavaScript code using Google's **Gemini AI**.
 
-- Node.js (version 16 or higher)
-- npm (Node Package Manager)
-- A Google Cloud account with access to the Gemini API
-- Gemini API key
+---
 
-## Installation
+## 📌 Prerequisites
+
+Ensure you have the following installed before using Code Commenter:
+
+- **Node.js** (Version **16** or higher)
+- **npm** (Node Package Manager)
+- **Google Cloud Account** with **Gemini API** access
+- **Gemini API Key**
+
+---
+
+## 📥 Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/RaviThakur1002/code-context-commenter
 
 # Navigate to the project directory
-cd code-commenter
+cd code-context-commenter
 
 # Install dependencies
 npm install
 
-# Link the package globally
+# Link the package globally (Linux/macOS)
 npm link
+
+# For Windows, use:
+powershell -Command "npm link"
 ```
 
-### 2. Configure API Key
+---
 
-Before using the tool, you need to set up your Gemini API key:
+## 🔑 Configure API Key
+
+Before using the tool, set up your **Gemini API key**:
 
 ```bash
 node src/config.js
 ```
 
-When prompted, enter your Gemini API key. The key will be securely stored using Configstore.
+When prompted, enter your **Gemini API Key**. It will be securely stored using **Configstore**.
 
-To clear your API key at any time:
+To **reset/clear** your API key at any time:
 ```bash
 node src/config.js --clear
 ```
 
-## Usage
+---
 
-### Basic Usage
+## 🚀 Usage
+
+### 🏃 Basic Command
 ```bash
 code-commenter path/to/your/file.js
 ```
 
-### Interactive Options
-
+### 🎛 Interactive Commenting Options
 When running the tool, you'll be presented with three commenting styles:
 
-1. **Default Style**: Uses predefined commenting guidelines
-2. **Custom Instructions**: Allows you to provide specific commenting instructions
-3. **Line-specific Comments**: Lets you focus on commenting specific sections of code
+1️⃣ **Default Style** → Uses predefined best-practice commenting guidelines.
+2️⃣ **Custom Instructions** → Allows you to provide specific commenting instructions.
+3️⃣ **Line-specific Comments** → Lets you focus on commenting specific sections of code.
 
-## Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 code-commenter/
@@ -70,7 +85,9 @@ code-commenter/
 └── Installation.md
 ```
 
-## Package.json Configuration
+---
+
+## 🛠 Package.json Configuration
 
 ```json
 {
@@ -94,30 +111,52 @@ code-commenter/
 }
 ```
 
-## Dependencies
+---
 
-- **@google/generative-ai**: Google's Generative AI SDK for Gemini
-- **configstore**: For secure storage of API keys
-- **inquirer**: Interactive command line interface
-- **readline-sync**: Synchronous readline for command line input
+## 📦 Dependencies
 
-## Troubleshooting
+| Package                  | Purpose                                      |
+|--------------------------|----------------------------------------------|
+| **@google/generative-ai** | Google's Generative AI SDK for Gemini       |
+| **configstore**          | Secure storage for API keys                  |
+| **inquirer**             | Interactive CLI user prompts                 |
+| **readline-sync**        | Synchronous CLI input handling               |
 
-1. **API Key Issues**
-   - If you get a warning about the API key, run `node src/config.js` to set it up
-   - If the key is invalid, the tool will automatically prompt you to enter it again
+---
 
-2. **Permission Issues**
-   ```bash
-   # If you get permission errors, try:
-   sudo npm link  # On Unix-based systems
-   # Or run PowerShell as Administrator for Windows
-   ```
+## 🛠 Troubleshooting
 
-3. **Module Not Found Errors**
-   - Ensure you have all dependencies installed: `npm install`
-   - Check that you're using Node.js version 16 or higher
+### 🔑 API Key Issues
+- If you receive an API key warning, run:
+  ```bash
+  node src/config.js
+  ```
+- If the key is invalid, the tool will prompt you to enter it again.
 
-## License
+### 🔒 Permission Issues
+```bash
+# If you get permission errors, try:
+sudo npm link  # For Unix-based systems
+```
+- On Windows, **run PowerShell as Administrator** and retry:
+  ```powershell
+  npm link
+  ```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### 📦 Module Not Found Errors
+- Ensure you have installed all dependencies:
+  ```bash
+  npm install
+  ```
+- Check that you are using **Node.js 16 or higher**.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+💡 **Enhance your code with AI-powered comments effortlessly!** 🚀
+
