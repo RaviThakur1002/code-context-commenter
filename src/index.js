@@ -13,7 +13,7 @@ export function processFile(filePath) {
     try {
       // Send the entire file content directly to generate comments
       const commentedCode = await generateComments(data);
-      
+
       // Write the commented code back to the file
       fs.writeFile(filePath, commentedCode, (err) => {
         if (err) console.error("❌ Error saving file:", err);
