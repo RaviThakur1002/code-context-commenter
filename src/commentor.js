@@ -5,6 +5,7 @@ import readlineSync from "readline-sync";
 const DEFAULT_PROMPT = `You are a helpful code documentation assistant.
 Your task is to add useful comments to the given JavaScript code.
 IMPORTANT:
+- Add comments only to the functions not for each line
 - DO NOT modify any of the existing code
 - Only add comments above the relevant code sections
 - Preserve all existing code formatting and structure exactly as is
